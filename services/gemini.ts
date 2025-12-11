@@ -1,14 +1,9 @@
 import { GoogleGenAI } from "@google/genai";
 import { Property } from "../types";
 
-const apiKey = process.env.API_KEY || '';
-const ai = apiKey ? new GoogleGenAI({ apiKey }) : null;
+const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
 
 export const getInvestmentAnalysis = async (property: Property): Promise<string> => {
-  if (!ai) {
-    return "API Key no configurada. No se puede generar el análisis en este momento.";
-  }
-
   try {
     const prompt = `
       Actúa como un experto en inversiones inmobiliarias en Cartagena, Colombia.
