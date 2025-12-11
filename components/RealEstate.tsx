@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Property, PropertyType, Zone } from '../types';
-import { Search, Bed, Bath, Move, MapPin, Sparkles, X, BrainCircuit, Check } from 'lucide-react';
+import { Search, Bed, Bath, Move, MapPin, Sparkles, X, BrainCircuit } from 'lucide-react';
 import { getInvestmentAnalysis } from '../services/gemini';
 
 interface PropertyCardProps {
